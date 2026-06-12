@@ -11,7 +11,6 @@
 
   :root {
     --dark: #1a1a1a;
-    --charcoal: #2d2d2d;
     --gold: #B8922A;
     --gold-light: #D4AA45;
     --gold-pale: #F9F3E5;
@@ -22,352 +21,74 @@
     --text-body: #444444;
     --text-muted: #888888;
     --border-light: #E8E8E5;
-    --success: #2a9d6a;
   }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--white);
-    color: var(--dark);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--dark); min-height: 100vh; overflow-x: hidden; }
 
-  /* ── HERO ── */
-  .hero {
-    background: var(--dark);
-    padding: 72px 20px 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent 0%, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%, transparent 100%);
-    opacity: 0.5;
-  }
-  .hero-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 64px;
-    align-items: start;
-  }
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    margin-bottom: 22px;
-  }
-  .eyebrow::before {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background: var(--gold);
-    display: inline-block;
-  }
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(34px, 4vw, 54px);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-    color: var(--white);
-    margin-bottom: 26px;
-  }
-  h1 em {
-    font-style: normal;
-    color: var(--gold-light);
-    display: block;
-  }
-  .hero-subtext {
-    font-size: 15px;
-    color: #999;
-    line-height: 1.75;
-    max-width: 460px;
-    margin-bottom: 36px;
-    font-weight: 400;
-  }
-  .trust-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 52px;
-  }
-  .pill {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(184,146,42,0.2);
-    padding: 8px 16px;
-    border-radius: 2px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #bbb;
-    letter-spacing: 0.02em;
-  }
+  .hero { background: var(--dark); padding: 72px 20px 0; position: relative; overflow: hidden; }
+  .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%, transparent 100%); opacity: 0.5; }
+  .hero-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: start; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 22px; }
+  .eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--gold); display: inline-block; }
+  h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(34px, 4vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -0.025em; color: var(--white); margin-bottom: 26px; }
+  h1 em { font-style: normal; color: var(--gold-light); display: block; }
+  .hero-subtext { font-size: 15px; color: #999; line-height: 1.75; max-width: 460px; margin-bottom: 36px; font-weight: 400; }
+  .trust-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 52px; }
+  .pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(184,146,42,0.2); padding: 8px 16px; border-radius: 2px; font-size: 12px; font-weight: 500; color: #bbb; letter-spacing: 0.02em; }
   .pill svg { flex-shrink: 0; }
-
-  /* ── MACHINERY STRIP ── */
-  .machinery-strip {
-    padding: 24px 0 0;
-    display: flex;
-    gap: 24px;
-    align-items: flex-end;
-    border-top: 1px solid rgba(255,255,255,0.07);
-  }
-  .asset-tag {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    opacity: 0.35;
-    transition: opacity 0.2s;
-  }
+  .machinery-strip { padding: 24px 0 0; display: flex; gap: 24px; align-items: flex-end; border-top: 1px solid rgba(255,255,255,0.07); }
+  .asset-tag { display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.35; transition: opacity 0.2s; }
   .asset-tag:hover { opacity: 0.85; }
   .asset-icon { width: 52px; height: 36px; display: flex; align-items: flex-end; justify-content: center; }
-  .asset-tag span {
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #888;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-  }
+  .asset-tag span { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; font-weight: 600; font-family: 'Montserrat', sans-serif; }
 
-  /* ── FORM CARD ── */
-  .form-card {
-    background: var(--white);
-    border-radius: 3px 3px 0 0;
-    padding: 36px 32px 40px;
-    color: var(--dark);
-    box-shadow: 0 -2px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(184,146,42,0.12);
-  }
-  .form-card-header {
-    margin-bottom: 28px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-light);
-  }
-  .form-card-header h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
-    font-weight: 800;
-    color: var(--dark);
-    margin-bottom: 4px;
-    letter-spacing: -0.02em;
-  }
+  .form-card { background: var(--white); border-radius: 3px 3px 0 0; padding: 36px 32px 40px; color: var(--dark); box-shadow: 0 -2px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(184,146,42,0.12); }
+  .form-card-header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light); }
+  .form-card-header h2 { font-family: 'Montserrat', sans-serif; font-size: 21px; font-weight: 800; color: var(--dark); margin-bottom: 4px; letter-spacing: -0.02em; }
   .form-card-header p { font-size: 13px; color: var(--text-muted); }
   .gold-bar { width: 28px; height: 2px; background: var(--gold); margin-bottom: 14px; }
 
-  /* ── FORM QUESTIONS ── */
   .question-block { margin-bottom: 16px; position: relative; }
-  .question-block label {
-    display: block;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-body);
-    margin-bottom: 6px;
-    font-family: 'Montserrat', sans-serif;
-  }
+  .question-block label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-body); margin-bottom: 6px; font-family: 'Montserrat', sans-serif; }
   .question-block input,
   .question-block select,
-  .question-block textarea {
-    width: 100%;
-    padding: 11px 14px;
-    border: 1px solid var(--border-light);
-    border-radius: 2px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: var(--dark);
-    background: var(--off-white);
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    -webkit-appearance: none;
-  }
+  .question-block textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border-light); border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--dark); background: var(--off-white); transition: border-color 0.2s, box-shadow 0.2s; outline: none; -webkit-appearance: none; }
   .question-block input:focus,
   .question-block select:focus,
-  .question-block textarea:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(184,146,42,0.1);
-    background: var(--white);
-  }
+  .question-block textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,146,42,0.1); background: var(--white); }
   .question-block textarea { resize: vertical; min-height: 80px; }
 
-  .submit-btn {
-    width: 100%;
-    background: var(--gold);
-    color: var(--white);
-    border: none;
-    padding: 15px 24px;
-    border-radius: 2px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: background 0.2s, transform 0.15s;
-  }
+  .submit-btn { width: 100%; background: var(--gold); color: var(--white); border: none; padding: 15px 24px; border-radius: 2px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; margin-top: 8px; transition: background 0.2s, transform 0.15s; }
   .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
   .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
   .form-disclaimer { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 12px; line-height: 1.5; }
+  .form-error { background: #fee2e2; color: #c0392b; border-radius: 2px; padding: 10px 14px; font-size: 13px; margin-top: 10px; display: none; }
 
-  /* ── SOCIAL PROOF BAR ── */
-  .social-proof {
-    background: var(--light-grey);
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
-    padding: 40px 20px;
-  }
-  .proof-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .proof-stat {
-    text-align: center;
-    padding: 0 52px;
-    border-right: 1px solid var(--mid-grey);
-  }
+  .social-proof { background: var(--light-grey); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 40px 20px; }
+  .proof-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; }
+  .proof-stat { text-align: center; padding: 0 52px; border-right: 1px solid var(--mid-grey); }
   .proof-stat:last-child { border-right: none; }
-  .proof-stat strong {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: var(--gold);
-    letter-spacing: -0.03em;
-  }
-  .proof-stat span {
-    font-size: 10px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-  }
+  .proof-stat strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 800; color: var(--gold); letter-spacing: -0.03em; }
+  .proof-stat span { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; font-family: 'Montserrat', sans-serif; }
 
-  /* ── BENEFITS SECTION ── */
-  .benefits-section {
-    background: var(--white);
-    padding: 88px 20px;
-  }
-  .section-eyebrow {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-  }
-  .section-eyebrow::before, .section-eyebrow::after {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: var(--gold);
-    opacity: 0.5;
-  }
-  .benefits-section h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(22px, 2.8vw, 32px);
-    font-weight: 800;
-    color: var(--dark);
-    margin-bottom: 56px;
-    letter-spacing: -0.025em;
-  }
-  .benefits-grid {
-    max-width: 1120px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border-light);
-    border: 1px solid var(--border-light);
-  }
-  .benefit {
-    padding: 40px 32px;
-    background: var(--white);
-    transition: background 0.2s;
-  }
+  .benefits-section { background: var(--white); padding: 88px 20px; }
+  .section-eyebrow { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--gold); opacity: 0.5; }
+  .benefits-section h2 { text-align: center; font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 2.8vw, 32px); font-weight: 800; color: var(--dark); margin-bottom: 56px; letter-spacing: -0.025em; }
+  .benefits-grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-light); border: 1px solid var(--border-light); }
+  .benefit { padding: 40px 32px; background: var(--white); transition: background 0.2s; }
   .benefit:hover { background: var(--off-white); }
-  .benefit-icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 16px;
-    width: 100%;
-  }
-  .benefit h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--dark);
-    letter-spacing: -0.01em;
-  }
-  .benefit p {
-    font-size: 14px;
-    color: var(--text-body);
-    line-height: 1.7;
-  }
+  .benefit-icon { display: flex; align-items: center; margin-bottom: 20px; border-bottom: 2px solid var(--gold); padding-bottom: 16px; width: 100%; }
+  .benefit h3 { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--dark); letter-spacing: -0.01em; }
+  .benefit p { font-size: 14px; color: var(--text-body); line-height: 1.7; }
 
-  /* ── SUCCESS ── */
   #success-state { display: none; text-align: center; padding: 52px 20px; }
-  #success-state .check-circle {
-    width: 64px; height: 64px; background: var(--gold); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
-  }
-  #success-state h3 {
-    font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800;
-    color: var(--dark); margin-bottom: 8px; letter-spacing: -0.02em;
-  }
+  #success-state .check-circle { width: 64px; height: 64px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+  #success-state h3 { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 8px; letter-spacing: -0.02em; }
   #success-state p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-  /* ── ERROR ── */
-  .form-error {
-    background: #fee2e2;
-    color: #c0392b;
-    border-radius: 2px;
-    padding: 10px 14px;
-    font-size: 13px;
-    margin-top: 10px;
-    display: none;
-  }
+  footer { text-align: center; padding: 28px 20px; font-size: 12px; color: #555; border-top: 1px solid #333; background: var(--dark); }
 
-  /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 28px 20px;
-    font-size: 12px;
-    color: #555;
-    border-top: 1px solid #333;
-    background: var(--dark);
-  }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 860px) {
     .hero-inner { grid-template-columns: 1fr; gap: 32px; }
     .form-card { border-radius: 3px; }
@@ -381,121 +102,120 @@
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="eyebrow">Commercial Equipment Finance</div>
       <h1>Fund The<br>Equipment<em>That Builds<br>Your Business</em></h1>
-      <p class="hero-subtext">
-        Fast approvals for ABN holders. Finance excavators, trucks, trailers, forklifts, agricultural equipment and more — with competitive rates and flexible terms tailored for commercial operators.
-      </p>
+      <p class="hero-subtext">Fast approvals for ABN holders. Finance excavators, trucks, trailers, forklifts, agricultural equipment and more — with competitive rates and flexible terms tailored for commercial operators.</p>
       <div class="trust-pills">
-        <div class="pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          ABN Holders Welcome
-        </div>
-        <div class="pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Responses Within Minutes
-        </div>
-        <div class="pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secured & Confidential
-        </div>
-        <div class="pill">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          No Obligation Quote
-        </div>
+        <div class="pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>ABN Holders Welcome</div>
+        <div class="pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Responses Within Minutes</div>
+        <div class="pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secured & Confidential</div>
+        <div class="pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No Obligation Quote</div>
       </div>
-
       <div class="machinery-strip">
-        <div class="asset-tag">
-          <div class="asset-icon">
-            <svg width="52" height="28" viewBox="0 0 52 28" fill="none">
-              <rect x="0" y="8" width="34" height="14" rx="2" fill="#B8922A" opacity="0.7"/>
-              <rect x="34" y="12" width="14" height="10" rx="2" fill="#B8922A" opacity="0.5"/>
-              <rect x="40" y="9" width="6" height="7" rx="1" fill="#666" opacity="0.5"/>
-              <circle cx="8" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="28" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="44" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <span>Trucks</span>
-        </div>
-        <div class="asset-tag">
-          <div class="asset-icon">
-            <svg width="52" height="36" viewBox="0 0 52 36" fill="none">
-              <rect x="4" y="22" width="26" height="10" rx="3" fill="#B8922A" opacity="0.6"/>
-              <rect x="8" y="14" width="14" height="12" rx="2" fill="#B8922A" opacity="0.5"/>
-              <rect x="10" y="10" width="8" height="8" rx="1" fill="#666" opacity="0.4"/>
-              <line x1="22" y1="16" x2="38" y2="8" stroke="#B8922A" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-              <line x1="38" y1="8" x2="48" y2="18" stroke="#B8922A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-              <line x1="48" y1="18" x2="44" y2="26" stroke="#B8922A" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-              <circle cx="10" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="24" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <span>Excavators</span>
-        </div>
-        <div class="asset-tag">
-          <div class="asset-icon">
-            <svg width="40" height="36" viewBox="0 0 40 36" fill="none">
-              <rect x="8" y="12" width="18" height="18" rx="2" fill="#B8922A" opacity="0.6"/>
-              <rect x="4" y="8" width="5" height="22" rx="1" fill="#B8922A" opacity="0.5"/>
-              <rect x="2" y="8" width="3" height="2" fill="#666" opacity="0.5"/>
-              <rect x="2" y="14" width="3" height="2" fill="#666" opacity="0.5"/>
-              <rect x="4" y="6" width="12" height="3" rx="1" fill="#B8922A" opacity="0.4"/>
-              <circle cx="13" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="24" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <span>Forklifts</span>
-        </div>
-        <div class="asset-tag">
-          <div class="asset-icon">
-            <svg width="52" height="22" viewBox="0 0 52 22" fill="none">
-              <rect x="2" y="4" width="46" height="12" rx="2" fill="#B8922A" opacity="0.5"/>
-              <rect x="4" y="6" width="42" height="8" rx="1" fill="#333" opacity="0.3"/>
-              <circle cx="10" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="26" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-              <circle cx="42" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <span>Trailers</span>
-        </div>
-        <div class="asset-tag">
-          <div class="asset-icon">
-            <svg width="52" height="34" viewBox="0 0 52 34" fill="none">
-              <rect x="12" y="12" width="22" height="14" rx="2" fill="#B8922A" opacity="0.6"/>
-              <rect x="14" y="8" width="12" height="10" rx="2" fill="#666" opacity="0.35"/>
-              <rect x="16" y="6" width="8" height="6" rx="1" fill="#666" opacity="0.25"/>
-              <circle cx="6" cy="26" r="6" fill="#333" stroke="#B8922A" stroke-width="2"/>
-              <circle cx="6" cy="26" r="2" fill="#B8922A" opacity="0.5"/>
-              <circle cx="38" cy="28" r="4.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <span>Agriculture</span>
-        </div>
+        <div class="asset-tag"><div class="asset-icon"><svg width="52" height="28" viewBox="0 0 52 28" fill="none"><rect x="0" y="8" width="34" height="14" rx="2" fill="#B8922A" opacity="0.7"/><rect x="34" y="12" width="14" height="10" rx="2" fill="#B8922A" opacity="0.5"/><rect x="40" y="9" width="6" height="7" rx="1" fill="#666" opacity="0.5"/><circle cx="8" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="28" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="44" cy="23" r="4" fill="#333" stroke="#B8922A" stroke-width="1.5"/></svg></div><span>Trucks</span></div>
+        <div class="asset-tag"><div class="asset-icon"><svg width="52" height="36" viewBox="0 0 52 36" fill="none"><rect x="4" y="22" width="26" height="10" rx="3" fill="#B8922A" opacity="0.6"/><rect x="8" y="14" width="14" height="12" rx="2" fill="#B8922A" opacity="0.5"/><rect x="10" y="10" width="8" height="8" rx="1" fill="#666" opacity="0.4"/><line x1="22" y1="16" x2="38" y2="8" stroke="#B8922A" stroke-width="3" stroke-linecap="round" opacity="0.7"/><line x1="38" y1="8" x2="48" y2="18" stroke="#B8922A" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/><line x1="48" y1="18" x2="44" y2="26" stroke="#B8922A" stroke-width="2" stroke-linecap="round" opacity="0.5"/><circle cx="10" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="24" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/></svg></div><span>Excavators</span></div>
+        <div class="asset-tag"><div class="asset-icon"><svg width="40" height="36" viewBox="0 0 40 36" fill="none"><rect x="8" y="12" width="18" height="18" rx="2" fill="#B8922A" opacity="0.6"/><rect x="4" y="8" width="5" height="22" rx="1" fill="#B8922A" opacity="0.5"/><rect x="2" y="8" width="3" height="2" fill="#666" opacity="0.5"/><rect x="2" y="14" width="3" height="2" fill="#666" opacity="0.5"/><rect x="4" y="6" width="12" height="3" rx="1" fill="#B8922A" opacity="0.4"/><circle cx="13" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="24" cy="32" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/></svg></div><span>Forklifts</span></div>
+        <div class="asset-tag"><div class="asset-icon"><svg width="52" height="22" viewBox="0 0 52 22" fill="none"><rect x="2" y="4" width="46" height="12" rx="2" fill="#B8922A" opacity="0.5"/><rect x="4" y="6" width="42" height="8" rx="1" fill="#333" opacity="0.3"/><circle cx="10" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="26" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/><circle cx="42" cy="18" r="3.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/></svg></div><span>Trailers</span></div>
+        <div class="asset-tag"><div class="asset-icon"><svg width="52" height="34" viewBox="0 0 52 34" fill="none"><rect x="12" y="12" width="22" height="14" rx="2" fill="#B8922A" opacity="0.6"/><rect x="14" y="8" width="12" height="10" rx="2" fill="#666" opacity="0.35"/><rect x="16" y="6" width="8" height="6" rx="1" fill="#666" opacity="0.25"/><circle cx="6" cy="26" r="6" fill="#333" stroke="#B8922A" stroke-width="2"/><circle cx="6" cy="26" r="2" fill="#B8922A" opacity="0.5"/><circle cx="38" cy="28" r="4.5" fill="#333" stroke="#B8922A" stroke-width="1.5"/></svg></div><span>Agriculture</span></div>
       </div>
     </div>
 
-    <!-- FORM CARD -->
-    <div class="form-card" id="form-card">
+    <div class="form-card">
       <div id="form-content">
         <div class="form-card-header">
           <div class="gold-bar"></div>
-          <h2>Get Your Finance Quote</h2>
+          <h2>Apply Now</h2>
           <p>No obligation · Takes less than 2 minutes</p>
         </div>
 
-        <div id="questions-container"></div>
+        <!-- Field 1 -->
+        <div class="question-block">
+          <label for="f1">Full Name <span style="color:#c0392b">*</span></label>
+          <input type="text" id="f1" name="Full Name" placeholder="e.g. John Smith">
+        </div>
+        <!-- Field 2 -->
+        <div class="question-block">
+          <label for="f2">Business Name (or Trading As) <span style="color:#c0392b">*</span></label>
+          <input type="text" id="f2" name="Business Name (or Trading As)" placeholder="e.g. Smith Earthmoving Pty Ltd">
+        </div>
+        <!-- Field 3 -->
+        <div class="question-block">
+          <label for="f3">ABN <span style="color:#c0392b">*</span></label>
+          <input type="text" id="f3" name="ABN" placeholder="11 digit ABN">
+        </div>
+        <!-- Field 4 -->
+        <div class="question-block">
+          <label for="f4">Mobile Number <span style="color:#c0392b">*</span></label>
+          <input type="tel" id="f4" name="Mobile Number" placeholder="04XX XXX XXX">
+        </div>
+        <!-- Field 5 -->
+        <div class="question-block">
+          <label for="f5">Email Address <span style="color:#c0392b">*</span></label>
+          <input type="email" id="f5" name="Email Address" placeholder="your@email.com.au">
+        </div>
+        <!-- Field 6 — Equipment Type with Car/Ute added first -->
+        <div class="question-block">
+          <label for="f6">Equipment Type <span style="color:#c0392b">*</span></label>
+          <select id="f6" name="Equipment Type">
+            <option>Select equipment type</option>
+            <option>Car / Ute</option>
+            <option>Excavator / Earthmoving</option>
+            <option>Truck / Prime Mover</option>
+            <option>Trailer</option>
+            <option>Forklift / Warehouse</option>
+            <option>Agricultural Machinery</option>
+            <option>Crane / Lifting Equipment</option>
+            <option>Commercial Vehicle</option>
+            <option>Other Machinery</option>
+          </select>
+        </div>
+        <!-- Field 7 -->
+        <div class="question-block">
+          <label for="f7">Estimated Finance Amount <span style="color:#c0392b">*</span></label>
+          <select id="f7" name="Estimated Finance Amount">
+            <option>Select amount range</option>
+            <option>Under $50,000</option>
+            <option>$50,000 – $100,000</option>
+            <option>$100,000 – $250,000</option>
+            <option>$250,000 – $500,000</option>
+            <option>$500,000 – $1,000,000</option>
+            <option>Over $1,000,000</option>
+          </select>
+        </div>
+        <!-- Field 8 -->
+        <div class="question-block">
+          <label for="f8">How long has your business been operating?</label>
+          <select id="f8" name="How long has your business been operating?">
+            <option>Select time in business</option>
+            <option>Less than 12 months</option>
+            <option>1–2 years</option>
+            <option>2–5 years</option>
+            <option>5+ years</option>
+          </select>
+        </div>
+        <!-- Field 9 — NEW: GST registered -->
+        <div class="question-block">
+          <label for="f9">How long has your business been GST registered?</label>
+          <select id="f9" name="How long has your business been GST registered?">
+            <option>Select time GST registered</option>
+            <option>Less than 12 months</option>
+            <option>1–2 years</option>
+            <option>2–5 years</option>
+            <option>5+ years</option>
+          </select>
+        </div>
+        <!-- Field 10 -->
+        <div class="question-block">
+          <label for="f10">Any additional details about the asset or finance needed?</label>
+          <textarea id="f10" name="Any additional details about the asset or finance needed?" placeholder="e.g. 2022 Caterpillar 308E, currently for sale at $180,000 — looking for 60-month term"></textarea>
+        </div>
 
         <button class="submit-btn" id="submit-btn" onclick="submitForm()">Get My Free Quote →</button>
         <div class="form-error" id="form-error">Something went wrong. Please try again or contact us directly.</div>
-        <p class="form-disclaimer">
-          Your information is protected and never sold to third parties. An accredited finance broker will contact you directly.
-        </p>
+        <p class="form-disclaimer">Your information is protected and never sold to third parties. An accredited finance broker will contact you directly.</p>
       </div>
 
       <div id="success-state">
@@ -509,7 +229,6 @@
   </div>
 </section>
 
-<!-- SOCIAL PROOF -->
 <div class="social-proof">
   <div class="proof-inner">
     <div class="proof-stat"><strong>$50M+</strong><span>Funded This Year</span></div>
@@ -519,29 +238,22 @@
   </div>
 </div>
 
-<!-- BENEFITS -->
 <div class="benefits-section">
   <div class="section-eyebrow">Why Choose Us</div>
   <h2>Your Business Growth Partner</h2>
   <div class="benefits-grid">
     <div class="benefit">
-      <div class="benefit-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
+      <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
       <h3>Fast-Track Approval</h3>
       <p>Purpose-built for ABN holders and commercial operators. Same-day indicative approvals available for assets under $250K.</p>
     </div>
     <div class="benefit">
-      <div class="benefit-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      </div>
+      <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
       <h3>Broker Access To 50+ Lenders</h3>
       <p>We work across a wide panel to find the most competitive structure — chattel mortgage, finance lease, hire purchase, or novated.</p>
     </div>
     <div class="benefit">
-      <div class="benefit-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      </div>
+      <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8922A" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
       <h3>New, Used & Private Sale</h3>
       <p>Finance dealer stock, auction purchases, or private sale machinery and vehicles. We handle the paperwork end-to-end.</p>
     </div>
@@ -553,88 +265,59 @@
 </footer>
 
 <script>
-  const questions = [
-    { id: 1, label: "Full Name", type: "text", placeholder: "e.g. John Smith", required: true },
-    { id: 2, label: "Business Name (or Trading As)", type: "text", placeholder: "e.g. Smith Earthmoving Pty Ltd", required: true },
-    { id: 3, label: "ABN", type: "text", placeholder: "11 digit ABN", required: true },
-    { id: 4, label: "Mobile Number", type: "tel", placeholder: "04XX XXX XXX", required: true },
-    { id: 5, label: "Email Address", type: "email", placeholder: "your@email.com.au", required: true },
-    { id: 6, label: "Equipment Type", type: "select", options: ["Select equipment type","Excavator / Earthmoving","Truck / Prime Mover","Trailer","Forklift / Warehouse","Agricultural Machinery","Crane / Lifting Equipment","Commercial Vehicle","Other Machinery"], required: true },
-    { id: 7, label: "Estimated Finance Amount", type: "select", options: ["Select amount range","Under $50,000","$50,000 – $100,000","$100,000 – $250,000","$250,000 – $500,000","$500,000 – $1,000,000","Over $1,000,000"], required: true },
-    { id: 8, label: "How long has your business been operating?", type: "select", options: ["Select time in business","Less than 12 months","1–2 years","2–5 years","5+ years"], required: false },
-    { id: 9, label: "Any additional details about the asset or finance needed?", type: "textarea", placeholder: "e.g. 2022 Caterpillar 308E, currently for sale at $180,000 — looking for 60-month term", required: false }
-  ];
-
-  function renderQuestions() {
-    const container = document.getElementById('questions-container');
-    container.innerHTML = '';
-    questions.forEach((q) => {
-      const block = document.createElement('div');
-      block.className = 'question-block';
-      block.dataset.id = q.id;
-      let input = '';
-      if (q.type === 'select') {
-        input = `<select id="field_${q.id}" name="${q.label}">${q.options.map(o=>`<option>${o}</option>`).join('')}</select>`;
-      } else if (q.type === 'textarea') {
-        input = `<textarea id="field_${q.id}" name="${q.label}" placeholder="${q.placeholder||''}"></textarea>`;
-      } else {
-        input = `<input type="${q.type}" id="field_${q.id}" name="${q.label}" placeholder="${q.placeholder||''}">`;
-      }
-      block.innerHTML = `<label for="field_${q.id}">${q.label}${q.required ? ' <span style="color:#c0392b">*</span>' : ''}</label>${input}`;
-      container.appendChild(block);
-    });
-  }
-
   async function submitForm() {
     const btn = document.getElementById('submit-btn');
     const errorEl = document.getElementById('form-error');
     errorEl.style.display = 'none';
 
-    // Validate required fields
-    for (const q of questions) {
-      if (q.required) {
-        const el = document.getElementById(`field_${q.id}`);
-        if (!el || !el.value.trim() || el.value.startsWith('Select')) {
-          el.focus();
-          el.style.borderColor = '#c0392b';
-          el.style.boxShadow = '0 0 0 3px rgba(192,57,43,0.1)';
-          setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 2500);
-          return;
-        }
+    const required = [
+      { id: 'f1', label: 'Full Name' },
+      { id: 'f2', label: 'Business Name' },
+      { id: 'f3', label: 'ABN' },
+      { id: 'f4', label: 'Mobile Number' },
+      { id: 'f5', label: 'Email Address' },
+      { id: 'f6', label: 'Equipment Type' },
+      { id: 'f7', label: 'Finance Amount' }
+    ];
+
+    for (const field of required) {
+      const el = document.getElementById(field.id);
+      if (!el.value.trim() || el.value.startsWith('Select')) {
+        el.focus();
+        el.style.borderColor = '#c0392b';
+        el.style.boxShadow = '0 0 0 3px rgba(192,57,43,0.1)';
+        setTimeout(() => { el.style.borderColor = ''; el.style.boxShadow = ''; }, 2500);
+        return;
       }
     }
 
-    // Collect data
     const formData = new FormData();
-    questions.forEach(q => {
-      const el = document.getElementById(`field_${q.id}`);
-      if (el) formData.append(q.label, el.value);
-    });
+    for (let i = 1; i <= 10; i++) {
+      const el = document.getElementById('f' + i);
+      if (el) formData.append(el.name, el.value);
+    }
 
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
     try {
-      const response = await fetch('https://formspree.io/f/mdavwzwg', {
+      const res = await fetch('https://formspree.io/f/mdavwzwg', {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
-
-      if (response.ok) {
+      if (res.ok) {
         document.getElementById('form-content').style.display = 'none';
         document.getElementById('success-state').style.display = 'block';
       } else {
-        throw new Error('Submission failed');
+        throw new Error('Failed');
       }
-    } catch (err) {
+    } catch {
       btn.disabled = false;
       btn.textContent = 'Get My Free Quote →';
       errorEl.style.display = 'block';
     }
   }
-
-  renderQuestions();
 </script>
 </body>
 </html>
